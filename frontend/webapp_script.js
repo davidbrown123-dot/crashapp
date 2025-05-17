@@ -4,7 +4,7 @@ const locationStatusP = document.getElementById('location-status');
 const refreshWeatherBtn = document.getElementById('refresh-weather-btn');
 
 // --- Configuration --- (Keep your ngrok URL placeholder - UPDATE MANUALLY LATER)
-const NGROK_HTTPS_URL = 'https://c813-50-234-34-194.ngrok-free.app'; // <<<--- PASTE CURRENT NGROK URL HERE BEFORE BUILDING
+const NGROK_HTTPS_URL = 'https://crashapp-xyzy.onrender.com'; // <<<--- PASTE CURRENT NGROK URL HERE BEFORE BUILDING
 const WEBSOCKET_URL = `wss://${NGROK_HTTPS_URL.replace(/^https?:\/\//, '')}/ws`;
 const API_BASE_URL = NGROK_HTTPS_URL;
 
