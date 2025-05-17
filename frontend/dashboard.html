@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Crash Dashboard</title>
+    <link rel="stylesheet" href="style.css"> <!-- Optional CSS -->
+</head>
+<body>
+    <h1 class="title">⛔   Police Crash Dashboard   ⛔</h1>
+
+    <div class="container">
+        <h2>⚠️ Recent Crash Alerts</h2>
+        <div id="notifications" class="notifications-area">
+            <p>Waiting for new crash alerts...</p>
+            <!-- Notifications will be added here by JavaScript -->
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h2>📽️ Live Analysis Feed</h2>
+
+        <!-- The Image Tag for the MJPEG Stream -->
+        <img id="live-stream"
+             src="http://127.0.0.1:8000/stream/live" 
+             alt="Live Analysis Stream - Loading..."
+             width="640"
+             height="480"
+             style="background-color: #333; border: 1px solid #ccc; max-width: 100%; display: block; margin: auto;">
+             <!-- Basic styling added: dark background, border, responsive width, centered -->
+
+        <!-- Optional status text (can be updated with JS later if needed) -->
+        <p id="stream-status" style="text-align: center; margin-top: 5px; font-style: italic; color: #555;">
+            Status: Waiting for video analysis to start... (Stream may show placeholder)
+        </p>
+    </div>
+    <hr>
+
+    <div class="container">
+        <h2>⌛ Crash History</h2>
+        <button id="load-history-btn">Load History</button>
+        <div id="history-log">
+            <br>
+            <table id="history-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Detection Time</th>
+                        <th>Video Filename</th>
+                        <th>Logged At (DB)</th>
+                    </tr>
+                </thead>
+                <tbody id="history-tbody">
+                    <!-- History rows will be added here -->
+                </tbody>
+            </table>
+            <p id="history-status"></p>
+        </div>
+    </div>
+
+    <script src="dashboard_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Conditions & Alerts</title>
+
+    <!-- Use relative paths for assets within the APK -->
+    <link rel="stylesheet" href="style.css"> <!-- <<<--- REMOVED /static/ -->
+
+    <!-- PWA Manifest Link (Use relative path) -->
+    <link rel="manifest" href="manifest.json"> <!-- <<<--- REMOVED /static/ -->
+
+    <!-- Optional Theme Color -->
+    <meta name="theme-color" content="#007bff">
+
+</head>
+<body>
+    <h1 class="title">🚗 Road Conditions & Alerts 🚗</h1>
+
+    <div class="container">
+        <h2>🌡️ Current Conditions</h2>
+        <div id="weather-info">
+            <p>Fetching weather data...</p>
+            <!-- Weather/speed info here -->
+        </div>
+        <button id="refresh-weather-btn">Refresh Weather</button>
+        <p id="location-status" style="font-size: 0.8em;"></p>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h2>⚠️ Recent Crash Alerts</h2>
+        <div id="notifications" class="notifications-area">
+            <p>Waiting for new crash alerts...</p>
+            <!-- Notifications here -->
+        </div>
+    </div>
+
+    <!-- PWA Service Worker Registration (Use relative path) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // Register with relative path for local context within WebView
+                navigator.serviceWorker.register('service-worker.js') // <<<--- REMOVED /static/
+                    .then(registration => {
+                        console.log('SW registration successful scope: ', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('SW registration failed: ', error);
+                    });
+            });
+        } else { console.log('Service workers are not supported.'); }
+    </script>
+
+    <!-- Use relative path for assets within the APK -->
+    <script src="webapp_script.js" type="module"></script> <!-- <<<--- REMOVED /static/ -->
+
+</body>
+</html>

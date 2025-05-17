@@ -1,0 +1,23 @@
+{
+  "name": "SafeWay",
+  "short_name": "CrashApp",
+  "description": "Displays road conditions and crash alerts.",
+  "start_url": "/webapp", // Matches the FastAPI route we'll create
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/static/icons/icon-192x192.png", // Path served by FastAPI
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/icons/icon-512x512.png", // Path served by FastAPI
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

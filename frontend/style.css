@@ -1,0 +1,122 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #1f1f1f;
+    color: #f4f4f4;
+}
+
+.title {
+
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+h1, h2 {
+    color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.container {
+    background-color: #161616;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+}
+
+/* --- Notifications --- */
+.notifications-area {
+    max-height: 200px; /* Limit height */
+    overflow-y: auto; /* Add scrollbar if needed */
+    border: 1px solid #353535;
+    padding: 10px;
+    background-color: #3b3b3b;
+}
+
+.notification-item {
+    background-color: #ffd753; /* Light yellow */
+    border-left: 5px solid #e2bd4f; /* Yellow border */
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    color: black;
+}
+
+.notification-item-user {
+    background-color: #ff6773; /* Light red */
+    border-left: 5px solid #d45562; /* Red border */
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+}
+
+
+/* --- History Table --- */
+#history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#history-table th, #history-table td {
+    border: 1px solid #6b6b6b;
+    padding: 8px;
+    text-align: left;
+}
+
+#history-table th {
+    background-color: #3b3b3b;
+}
+
+#history-table tbody tr:nth-child(even) {
+    background-color: #3b3b3b;
+}
+
+#history-status {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* --- Weather Info --- */
+#weather-info p {
+    margin-bottom: 5px;
+}
+#weather-info strong {
+    display: inline-block;
+    width: 150px; /* Align labels */
+}
+
+#location-status {
+    color: #666;
+}
+
+
+/* --- Buttons --- */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
